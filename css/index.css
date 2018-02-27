@@ -1,0 +1,22 @@
+.container {
+  max-width: 720px;
+}
+.header-null {
+  display: none;
+}
+span.bullet {
+  padding: 0 5px;
+}
+@media (max-width: 600px) {
+  span.bullet {
+    display: none;
+  }
+}
+.pull-right {
+  text-align: right;
+}
+@media (max-width: 600px) {
+  .pull-right-sm {
+    text-align: right;
+  }
+}

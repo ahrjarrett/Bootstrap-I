@@ -1,1 +1,22 @@
-// Start here!
+// Variables
+@max-sm: ~'(max-width: 600px)';
+
+.container { max-width: 720px; }
+
+.header-null {
+    display: none;
+}
+
+
+span.bullet {
+    padding: 0 5px;
+    @media @max-sm { display: none; }
+}
+
+.pull-right {
+    text-align: right;
+}
+
+.pull-right-sm {
+    @media @max-sm { text-align: right; }
+}

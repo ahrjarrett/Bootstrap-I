@@ -1,0 +1,12 @@
+{
+  "name": "Bootstrap-I",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ahrjarrett/Bootstrap-I",
+  "author": "Andrew Jarrett <ahrjarrett@gmail.com>",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "typeset.css": "^0.6.1"
+  }
+}
