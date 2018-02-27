@@ -1,24 +1,59 @@
 // Variables
 @max-sm: ~'(max-width: 575px)';
+@max-tablet: ~'(max-width: 768px)';
+@tablet: ~'(min-width: 768px)';
+
 @font-headline: 'Eczar', serif;
 @font-body: 'Gentium Basic', serif;
 @font-body-italic: 'Gentium Basic', serif;
 
 @bg-img: '../images/subtle_grunge.png';
 
+@divider-color: #DEEAEA;
+@link-color: #DE4D1F;
+@font-headline-color: #222;
+@font-body-color: #212121;
+
 // Mixins
 .font-headline (@weight: 700) {
     font-family: @font-headline;
-    //font-weight: @weight;
+    font-weight: @weight;
+    color:       @font-headline-color;
 }
 
-.font-body (@weight: 400, @size: 20px) {
+.font-body (@weight: 400, @size: 1.25rem) {
     font-family: @font-body;
     font-weight: @weight;
-    font-size: @size;
+    font-size:   @size;
+    color:       @font-body-color;
 }
 
-.container { max-width: 720px; }
+.border-radius (@radius: 2px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius:    @radius;
+    border-radius:         @radius;
+    -moz-background-clip:    padding;
+    -webkit-background-clip: padding-box;
+    background-clip:         padding-box;
+}
+
+body {
+    background: url(@bg-img) top left repeat;
+    padding: 60px 0;
+}
+
+// Wildcard: remove default padding on all "col-*"
+// starting at tablet size
+.col, div[class^="col-"] {
+    @media @tablet {
+	padding: 0;
+    }
+}
+
+.container {
+    padding: 0 15px;
+    max-width: 720px;
+}
 
 
 // Typography:
@@ -26,8 +61,13 @@ h1,h2,h3,h4,h5,h6 {
     .font-headline();
 }
 
-p,span, a {
+p,span, a, div {
     .font-body();
+}
+
+a {
+    color: @link-color;
+    &:hover { color: @link-color; }
 }
 
 em, i {
@@ -35,22 +75,56 @@ em, i {
     line-height: inherit;
 }
 
-body {
-    background: url(@bg-img) top left repeat;
-}
-
 .pull-right { text-align: right; }
 .pull-right-sm {
     @media @max-sm { text-align: right; }
 }
+.pull-left-sm {
+    @media @max-sm { text-align: left; }
+}
+
+hr {
+    border-bottom: 0.15rem @divider-color solid ;
+    width: 100%;
+}
+
+
 
 // Header:
+//hr {
+//    margin-left: 15px;
+//    margin-right: 15px;
+//}
+
 .header-null {
     display: none;
 }
 
-h3.name {
+h3.name, h3.entry-title {
     font-size: 1.5rem;
     margin: 0;
-    padding: 1px 0;
+    padding: 0 0 2px 0;
+}
+
+h3.entry-title {
+    .font-headline(500);
+}
+
+span.phone, span.phone-bullet {
+    @media @max-tablet {
+	display: none;
+    }
+}
+
+.entry-links {
+    text-align: left;
+}
+
+.entry-details {
+    background: rgba(204, 204, 204, 0.38);
+    padding: 20px 20px 10px;
+}
+
+.entry-name {
+    margin-bottom: .75rem;
 }
