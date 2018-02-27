@@ -1,24 +1,56 @@
 // Variables
-//@import 
+@max-sm: ~'(max-width: 575px)';
+@font-headline: 'Eczar', serif;
+@font-body: 'Gentium Basic', serif;
+@font-body-italic: 'Gentium Basic', serif;
 
-@max-sm: ~'(max-width: 600px)';
+@bg-img: '../images/subtle_grunge.png';
+
+// Mixins
+.font-headline (@weight: 700) {
+    font-family: @font-headline;
+    //font-weight: @weight;
+}
+
+.font-body (@weight: 400, @size: 20px) {
+    font-family: @font-body;
+    font-weight: @weight;
+    font-size: @size;
+}
 
 .container { max-width: 720px; }
 
+
+// Typography:
+h1,h2,h3,h4,h5,h6 {
+    .font-headline();
+}
+
+p,span, a {
+    .font-body();
+}
+
+em, i {
+    font-style: italic;
+    line-height: inherit;
+}
+
+body {
+    background: url(@bg-img) top left repeat;
+}
+
+.pull-right { text-align: right; }
+.pull-right-sm {
+    @media @max-sm { text-align: right; }
+}
+
+// Header:
 .header-null {
     display: none;
 }
 
-
-span.bullet {
-    padding: 0 5px;
-    @media @max-sm { display: none; }
-}
-
-.pull-right {
-    text-align: right;
-}
-
-.pull-right-sm {
-    @media @max-sm { text-align: right; }
+h3.name {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 1px 0;
 }

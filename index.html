@@ -6,6 +6,11 @@
 
   <title>Digital Resume</title>
 
+  <!-- font injection -->
+  <link href="https://fonts.googleapis.com/css?family=Eczar:700|Gentium+Basic:400,400i" rel="stylesheet">
+
+
+
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/index.css">
 
@@ -19,37 +24,38 @@
   <h1 class="header-null">Andrew Jarrett</h1>
 
   <div class="container">
-    <div class="row">
-      <div class="col-sm-6 header header-show">
-	<div class="pull-right-sm">
-	  <h2 class="name">
-	    Andrew Jarrett
-	  </h2>
-	  <div class="pull-right-sm">
-	    <p>Austin TX</p>
-	  </div>
-	</div>
+    <div class="row header header-show">
 
+      <div class="col-sm-6">
+	<div class="pull-right-sm">
+	  <h3 class="name">Andrew Jarrett</h2>
+	  <div class="location"><span>Austin TX</span></div>
+	</div>
       </div>
+
       <div class="col-sm-6">
 	<div class="contact-me contact-data pull-right">
-	  <span class="call call-me phone-data call-me-dont-spam-me">
-	    (303) 522-8331
-	  </span>
+	  <span class="phone call-me phone-data call-me-dont-spam-me">(303) 522-8331</span>
 	  <span class="bullet">&#8226;</span>
-	  <span class="">
-	    <a>ahrjarrett@gmail.com</a>
+	  <span class="email email-me email-data email-me-dont-spam-me">
+	    <a href="mailto:ahrjarrett@gmail.com">ahrjarrett@gmail.com</a>
 	  </span>
 	</div>
-
+	<div class="social pull-right">
+	  <a href='#'>Portfolio</a>
+	  <span class="bullet">&#8226;</span>
+	  <a href='https://www.linkedin.com/in/andrewhjarrett/'>LinkedIn</a>
+	  <span class="bullet">&#8226;</span>
+	  <a href='https://github.com/ahrjarrett/'>GitHub</a>
+	</div>
       </div>
+      <hr />
+    </div><!-- .header -->
+  </div><!-- .container -->
 
-      </div>
-    </div>
-  </div><!-- container -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/index.js"></script>
 </body>
 </html>

@@ -1,22 +1,42 @@
 .container {
   max-width: 720px;
 }
-.header-null {
-  display: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Eczar', serif;
 }
-span.bullet {
-  padding: 0 5px;
+p,
+span,
+a {
+  font-family: 'Gentium Basic', serif;
+  font-weight: 400;
+  font-size: 20px;
 }
-@media (max-width: 600px) {
-  span.bullet {
-    display: none;
-  }
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+body {
+  background: url('../images/subtle_grunge.png') top left repeat;
 }
 .pull-right {
   text-align: right;
 }
-@media (max-width: 600px) {
+@media (max-width: 575px) {
   .pull-right-sm {
     text-align: right;
   }
+}
+.header-null {
+  display: none;
+}
+h3.name {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 1px 0;
 }
