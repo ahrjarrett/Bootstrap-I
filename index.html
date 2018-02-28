@@ -35,8 +35,10 @@
       </div>
       <div class="col-sm-6">
 	<div class="contact-me contact-data pull-right">
+	  <!-- Remove phone number for now
 	  <span class="phone call-me phone-data call-me-dont-spam-me">(303) 522-8331</span>
 	  <span class="bullet phone-bullet">&#8226;</span>
+	  -->
 	  <span class="email email-me email-data email-me-dont-spam-me">
 	    <a href="mailto:ahrjarrett@gmail.com">ahrjarrett@gmail.com</a>
 	  </span>
@@ -52,10 +54,10 @@
       <hr />
     </div><!-- .row.header -->
 
-    <div class="projects">
-      <div>
+    <div class="projects chunk-parent">
+      <h3 class="chunk-header"> Projects </h3>
 
-      <div class="project">
+      <div class="project chunk-child">
         <div class="row entry-name">
 	  <div class="col-sm-9">
 	    <h3 class="entry-title">Google Polygon</h3>
@@ -63,18 +65,45 @@
 	  <div class="col-sm-3">
 	    <div class="entry-links">
   	      <div class="pull-right pull-left-sm">
-  		<span class="live-project-link"><a href="#"> Live </a></span>
+  		<span class="live-project-link"><a href="https://polygonpolygon.herokuapp.com/"> Live </a></span>
   		<span class="bullet">&#8226;</span>
-  		<span class="live-project-repo"><a href="#"> GitHub </a></span>
+  		<span class="live-project-repo"><a href="https://github.com/ahrjarrett/polygon"> GitHub </a></span>
   	      </div>
   	    </div>
 	  </div>
 	</div><!-- .row -->
 	<div class="row">
 	  <div class="entry-details">
-	    Click at least twice on the map to create a line, three times or more to create a polygon. On the right are operations you can perform, including a log of the coordinates of the line/polygon and a function that will check a JSON array full of coordinates and return which, if any, are contained inside the polygon and fall within the designated price range (click 'See JSON Data' to see all coordinates).
+	    <p class="text-indent">
+	      Click at least twice on the map to create a line, three times or more to create a polygon. On the right are operations you can perform, including a log of the coordinates of the line/polygon and a function that will check a JSON array full of coordinates and return which, if any, are contained inside the polygon and fall within the designated price range (click 'See JSON Data' to see all coordinates).
+	    </p>
+	  </div>
+	</div>
+      </div><!-- .project -->
 
-
+      <div class="project chunk-child">
+        <div class="row entry-name">
+	  <div class="col-sm-9">
+	    <h3 class="entry-title">Sun Ray Pools</h3>
+	  </div>
+	  <div class="col-sm-3">
+	    <div class="entry-links">
+  	      <div class="pull-right pull-left-sm">
+  		<span class="live-project-link"><a href="https://sunraypoolstx.herokuapp.com/"> Live </a></span>
+  		<span class="bullet">&#8226;</span>
+  		<span class="live-project-repo"><a href="https://github.com/ahrjarrett/sun"> GitHub </a></span>
+  	      </div>
+  	    </div>
+	  </div>
+	</div><!-- .row -->
+	<div class="row">
+	  <div class="entry-details">
+	    <p class="text-indent">
+	      Built website for a swimming pool client from scratch. Stack included Express.js for routing, Jade for the templating engine, Axios for making AJAX calls, Gulp for the dev workflow, and Bootstrap and Font Awesome for frontend work.
+	    </p>
+	    <p class="text-indent">
+	      This project was fun, and a no-brainer excuse to work with the OpenWeatherMap API. Also, this project was my first real exposure to modularity and the MVC framework; you can explore the architecture in the <a href="https://github.com/ahrjarrett/sun/tree/master/app">app folder</a>.
+	    </p>
 	  </div>
 	</div>
       </div><!-- .project -->
