@@ -70,20 +70,18 @@ hr {
   border-bottom: 0.15rem #DEEAEA solid;
   width: 100%;
 }
+.navigation-wrapper,
+.footer-banner-wrapper {
+  background: black url('../images/asfalt.png') top left repeat;
+}
 .navigation-wrapper {
-  padding-left: 0;
-  padding-right: 0;
   padding: 2rem 0;
-  background: black url(../images/asfalt.png) top left repeat;
   margin-bottom: 4rem;
+  border-bottom: 0.15rem #DEEAEA solid;
 }
-@media (max-width: 900px) {
-  .my-octo-wrapper {
-    display: none;
-  }
-}
-.my-octo-wrapper svg {
-  fill: none !important;
+.footer-banner-wrapper {
+  padding: 1.75rem 0;
+  text-align: center;
 }
 .navigation {
   justify-content: space-between;
@@ -110,6 +108,28 @@ hr {
 }
 .navigation a:hover {
   background: #DE4D1F;
+}
+.banner-bottom {
+  border-radius: 6px 6px 0 0;
+  background: #DE4D1F;
+  padding: 1.65rem 0 0.825rem;
+  width: 720px;
+  margin: 0 auto;
+}
+.banner-bottom-text {
+  color: white;
+  padding-top: 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.copyright {
+  font-size: 75%;
+  width: 100%;
+  color: #9E9E9E;
+  padding: 0;
+}
+.copyright a {
+  font-size: 100%;
 }
 .header-null {
   display: none;
@@ -173,4 +193,12 @@ h3.entry-title {
   .chunk-header {
     margin-bottom: 1.25rem;
   }
+}
+@media (max-width: 900px) {
+  .my-octo-wrapper {
+    display: none;
+  }
+}
+.my-octo-wrapper svg {
+  fill: #DE4D1F;
 }
