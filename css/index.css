@@ -113,7 +113,7 @@ hr {
   border-radius: 6px 6px 0 0;
   background: #DE4D1F;
   padding: 1.65rem 0 0.825rem;
-  width: 720px;
+  max-width: 720px;
   margin: 0 auto;
 }
 .banner-bottom-text {
