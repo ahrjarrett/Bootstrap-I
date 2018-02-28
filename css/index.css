@@ -32,6 +32,10 @@ div {
   font-size: 1.25rem;
   color: #212121;
 }
+.block-text,
+.block-text a {
+  font-size: 1rem;
+}
 p + p {
   margin-top: -1rem;
 }
@@ -73,6 +77,14 @@ hr {
   background: black url(../images/asfalt.png) top left repeat;
   margin-bottom: 4rem;
 }
+@media (max-width: 900px) {
+  .my-octo-wrapper {
+    display: none;
+  }
+}
+.my-octo-wrapper svg {
+  fill: none !important;
+}
 .navigation {
   justify-content: space-between;
   max-width: 720px;
@@ -99,12 +111,12 @@ hr {
 .navigation a:hover {
   background: #DE4D1F;
 }
+.header-null {
+  display: none;
+}
 .header,
 .entry-name {
   align-items: center;
-}
-.header-null {
-  display: none;
 }
 h3.name {
   font-size: 1.625rem;
@@ -145,10 +157,20 @@ h3.entry-title {
 .chunk-parent {
   margin-top: 2rem;
 }
+@media (max-width: 400px) {
+  .chunk-parent {
+    margin-top: 2.5rem;
+  }
+}
 .chunk-child {
   margin-bottom: 2rem;
 }
 .chunk-header {
   text-align: center;
   font-size: 1.375rem;
+}
+@media (max-width: 400px) {
+  .chunk-header {
+    margin-bottom: 1.25rem;
+  }
 }

@@ -1,20 +1,30 @@
-// Variables
+// VARIABLES
+
+// Breakpoints:
 @max-sm: ~'(max-width: 575px)';
 @max-tablet: ~'(max-width: 768px)';
+@max-tablet-landscape: ~'(max-width: 900px)';
+
+@phone: ~'(min-width: 400px)';
+@phone-down: ~'(max-width: 400px)';
 @tablet: ~'(min-width: 768px)';
 
+// Images:
+@bg-img: '../images/subtle_grunge.png';
+
+// Fonts:
 @font-headline: 'Eczar', serif;
 @font-body: 'Gentium Basic', serif;
 @font-body-italic: 'Gentium Basic', serif;
 
-@bg-img: '../images/subtle_grunge.png';
-
+// Colors:
 @divider-color: #DEEAEA;
 @link-color: #DE4D1F;
 @font-headline-color: #222;
 @font-body-color: #212121;
 
-// Mixins
+
+// MIXINS
 .font-headline (@weight: 700, @size: 1.25rem) {
     font-family: @font-headline;
     font-weight: @weight;
@@ -38,18 +48,17 @@
     background-clip:         padding-box;
 }
 
+
+// MAIN STYLES
 body {
     background: url(@bg-img) top left repeat;
     // consider changing this to 1.65 later:
     line-height: 1.6;
 }
 
-// Wildcard: remove default padding on all "col-*"
-// starting at tablet size
+// Remove default padding on all "col-*" starting at tablet size
 .col, div[class^="col-"] {
-    @media @tablet {
-	padding: 0;
-    }
+    @media @tablet { padding: 0; }
 }
 
 .container {
@@ -67,7 +76,9 @@ p,span, a, div {
     .font-body();
 }
 
-// Offset margin-bottom for adjacent paragraphs:
+.block-text, .block-text a { font-size: 1rem; }
+
+// Offset margin-bottom for adjacent paragraphs
 p + p {
     margin-top: -1rem;
 }
@@ -77,6 +88,7 @@ a {
     &:hover { color: @link-color; }
 }
 
+// Broken?
 em, i {
     font-style: italic;
     line-height: inherit;
@@ -106,15 +118,19 @@ hr {
     margin-bottom: 4rem;
 }
 
+.my-octo-wrapper {
+    @media @max-tablet-landscape { display: none; }
+    svg {
+	//fill:#151513
+	fill: none !important;
+    }
+}
 
 .navigation {
     justify-content: space-between;
     max-width: 720px;
     margin: 0 auto;
-    ul {
-	display: flex;
-    }
-
+    ul { display: flex; }
     a {
 	box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.08), 1px 1px 1px black;
 	flex: 0 0 23.5%;
@@ -132,12 +148,10 @@ hr {
 
 
 // Header:
+.header-null { display: none; }
+
 .header, .entry-name {
     align-items: center;
-}
-
-.header-null {
-    display: none;
 }
 
 h3.name { font-size: 1.625rem; margin: 0; }
@@ -172,7 +186,12 @@ span.phone, span.phone-bullet {
 }
 
 // Chunks
-.chunk-parent { margin-top: 2rem;}
+.chunk-parent {
+    margin-top: 2rem;
+    @media @phone-down {
+	margin-top: 2.5rem;
+    }
+}
 
 .chunk-child {
     margin-bottom: 2rem;
@@ -181,4 +200,5 @@ span.phone, span.phone-bullet {
 .chunk-header {
     text-align: center;
     font-size: 1.375rem;
+    @media @phone-down { margin-bottom: 1.25rem; }
 }
