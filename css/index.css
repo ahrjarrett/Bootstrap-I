@@ -1,6 +1,7 @@
 body {
   background: url('../images/subtle_grunge.png') top left repeat;
   padding: 60px 0;
+  line-height: 1.65;
 }
 @media (min-width: 768px) {
   .col,
