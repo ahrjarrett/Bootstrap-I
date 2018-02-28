@@ -40,7 +40,6 @@
 
 body {
     background: url(@bg-img) top left repeat;
-    padding: 60px 0;
     // consider changing this to 1.65 later:
     line-height: 1.6;
 }
@@ -98,6 +97,38 @@ hr {
     width: 100%;
 }
 
+// Navigation
+.navigation-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    padding: 2rem 0;
+    background: black url(../images/asfalt.png) top left repeat;
+    margin-bottom: 4rem;
+}
+
+
+.navigation {
+    justify-content: space-between;
+    max-width: 720px;
+    margin: 0 auto;
+    ul {
+	display: flex;
+    }
+
+    a {
+	box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.08), 1px 1px 1px black;
+	flex: 0 0 23.5%;
+	background: rgba(41, 41, 41, 0.22);
+	.border-radius(0.333333rem);
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 1.25rem;
+	transition: .3s all ease-in-out;
+	padding: 0.625rem;
+	&:hover {
+	    background: @link-color;
+	}
+    }
+}
 
 
 // Header:
