@@ -108,6 +108,8 @@ em, i {
 hr {
     border-bottom: 0.15rem @divider-color solid ;
     width: 100%;
+    //margin-left: -15px;
+    //margin-right: -15px;
 }
 
 // Navigation & Footer
@@ -198,19 +200,25 @@ span.phone, span.phone-bullet {
     text-align: left;
 }
 
+.timeframe {
+    text-align: left;
+}
+
 .entry-details {
     background: rgba(204, 204, 204, 0.38);
     padding: 20px 20px 10px;
     .border-radius();
 }
 
-.entry-name {
-    margin-bottom: .75rem;
+.entry-name, .entry-links {
+    line-height: 1.075;
+    margin-bottom: .25rem;
 }
 
 // Chunks
 .chunk-parent {
     margin-top: 2rem;
+    margin-bottom: 5rem;
     @media @phone-down {
 	margin-top: 2.5rem;
     }
@@ -222,7 +230,8 @@ span.phone, span.phone-bullet {
 
 .chunk-header {
     text-align: center;
-    font-size: 1.375rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     @media @phone-down { margin-bottom: 1.25rem; }
 }
 
